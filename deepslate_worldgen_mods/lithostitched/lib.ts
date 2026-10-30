@@ -31,7 +31,7 @@ export class LithostitchedSqrt extends DensityFunction {
         return new LithostitchedSqrt(visitor.apply(this.input));
     }
 
-    static fromJson(obj: any, parser: InputParser): LithostitchedSqrt {
+    static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedSqrt {
         return new LithostitchedSqrt(parser(obj.argument));
     }
 }
@@ -82,7 +82,7 @@ export class LithostitchedCeil extends DensityFunction {
         return new LithostitchedCeil(visitor.apply(this.input));
     }
 
-    static fromJson(obj: any, parser: InputParser): LithostitchedCeil {
+    static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedCeil {
         return new LithostitchedCeil(parser(obj.argument));
     }
 }
@@ -107,7 +107,7 @@ export class LithostitchedFloor extends DensityFunction {
         return new LithostitchedFloor(visitor.apply(this.input));
     }
 
-    static fromJson(obj: any, parser: InputParser): LithostitchedFloor {
+    static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedFloor {
         return new LithostitchedFloor(parser(obj.argument));
     }
 }
@@ -131,7 +131,7 @@ export class LithostitchedSin extends DensityFunction {
         return new LithostitchedSin(visitor.apply(this.input));
     }
 
-    static fromJson(obj: any, parser: InputParser): LithostitchedSin {
+    static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedSin {
         return new LithostitchedSin(parser(obj.argument));
     }
 }
@@ -155,7 +155,7 @@ export class LithostitchedCos extends DensityFunction {
         return new LithostitchedCos(visitor.apply(this.input));
     }
 
-    static fromJson(obj: any, parser: InputParser): LithostitchedCos {
+    static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedCos {
         return new LithostitchedCos(parser(obj.argument));
     }
 }
@@ -192,7 +192,7 @@ export class LithostitchedMix extends DensityFunction {
         );
     }
 
-    static fromJson(obj: any, parser: InputParser): LithostitchedMix {
+    static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedMix {
         return new LithostitchedMix(
             parser(obj.input),
             parser(obj.argument1),
@@ -245,7 +245,7 @@ export class LithostitchedSelect extends DensityFunction {
         );
     }
 
-    static fromJson(obj: any, parser: InputParser): LithostitchedSelect {
+    static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedSelect {
         const data = obj.select || obj;
         const selections = (data.selections || []).map((s: any) => {
             let range = s.range;
@@ -288,7 +288,7 @@ export class LithostitchedShift extends DensityFunction {
         );
     }
 
-    static fromJson(obj: any, parser: InputParser): LithostitchedShift {
+    static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedShift {
         return new LithostitchedShift(
             parser(obj.input),
             parser(obj.shift_x),
@@ -407,10 +407,10 @@ export class LithostitchedFastNoise extends DensityFunction {
         );
     }
 
-    static fromJson(obj: any, parser: InputParser): LithostitchedFastNoise {
+    static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedFastNoise {
         ensureFastNoiseRegistry();
         const registry = Registry.REGISTRY.get(Identifier.parse('lithostitched:fast_noise_config'));
-        const configHolder = Holder.parser(registry, (o: any) => o)(obj.config);
+        const configHolder = Holder.parser(registry!, (o: any) => o)(obj.config);
 
         return new LithostitchedFastNoise(
             configHolder,

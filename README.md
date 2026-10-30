@@ -9,7 +9,8 @@ Deepslate compatibility patches and custom density function implementations for 
 - **[En-sityFunctions](#)** 
 - **[Tectonic](#)** (Apollo)
 
-<h3>Attention: Almost all implementations in this repository were created by generative AI in an agentic process.</h3>
+## Declaration of AI-use
+<h3>Almost all implementations in this repository were created by generative AI in an agentic process.</h3>
 <h6>... Although I am a strong advocate of reserving certain processes in programming for humans.</h6>
 
 Here is why I think that is okay:

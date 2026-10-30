@@ -1,3 +1,5 @@
+/// <reference path="./declarations.d.ts" />
+
 import type { DensityFunction } from 'deepslate';
 
 export type InputParser = (obj: unknown) => DensityFunction;
