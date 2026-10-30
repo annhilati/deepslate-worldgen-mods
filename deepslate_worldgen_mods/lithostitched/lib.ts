@@ -32,7 +32,7 @@ export class LithostitchedSqrt extends DensityFunction {
     }
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedSqrt {
-        return new LithostitchedSqrt(parser(obj.argument));
+        return new LithostitchedSqrt(parser(obj.input ?? obj.argument));
     }
 }
 
@@ -83,7 +83,7 @@ export class LithostitchedCeil extends DensityFunction {
     }
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedCeil {
-        return new LithostitchedCeil(parser(obj.argument));
+        return new LithostitchedCeil(parser(obj.input ?? obj.argument));
     }
 }
 
@@ -108,7 +108,7 @@ export class LithostitchedFloor extends DensityFunction {
     }
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedFloor {
-        return new LithostitchedFloor(parser(obj.argument));
+        return new LithostitchedFloor(parser(obj.input ?? obj.argument));
     }
 }
 
@@ -132,7 +132,7 @@ export class LithostitchedSin extends DensityFunction {
     }
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedSin {
-        return new LithostitchedSin(parser(obj.argument));
+        return new LithostitchedSin(parser(obj.input ?? obj.argument));
     }
 }
 
@@ -156,7 +156,7 @@ export class LithostitchedCos extends DensityFunction {
     }
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedCos {
-        return new LithostitchedCos(parser(obj.argument));
+        return new LithostitchedCos(parser(obj.input ?? obj.argument));
     }
 }
 
@@ -194,9 +194,9 @@ export class LithostitchedMix extends DensityFunction {
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedMix {
         return new LithostitchedMix(
-            parser(obj.input),
-            parser(obj.argument1),
-            parser(obj.argument2)
+            parser(obj.input ?? obj.argument),
+            parser(obj.argument1 ?? obj.arg1 ?? obj.left),
+            parser(obj.argument2 ?? obj.arg2 ?? obj.right)
         );
     }
 }
@@ -252,7 +252,7 @@ export class LithostitchedSelect extends DensityFunction {
             if (!Array.isArray(range)) range = [range, range];
             return { range: range as [number, number], function: parser(s.function) };
         });
-        return new LithostitchedSelect(parser(data.input), parser(data.fallback), selections);
+        return new LithostitchedSelect(parser(data.input ?? data.argument), parser(data.fallback), selections);
     }
 }
 
@@ -290,7 +290,7 @@ export class LithostitchedShift extends DensityFunction {
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): LithostitchedShift {
         return new LithostitchedShift(
-            parser(obj.input),
+            parser(obj.input ?? obj.argument),
             parser(obj.shift_x),
             parser(obj.shift_y),
             parser(obj.shift_z)

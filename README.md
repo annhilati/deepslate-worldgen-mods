@@ -4,10 +4,15 @@ Deepslate compatibility patches and custom density function implementations for 
 
 ## Supported Mods
 
-- **[More Density Functions](#)** (Klinbee)
-- **[Lithostitched](#)** (Apollo)
-- **[En-sityFunctions](#)** 
-- **[Tectonic](#)** (Apollo)
+#### Worldgen Libraries
+
+- **[More Density Functions](https://github.com/klinbee/More-Density-Functions)** (@klinbee)
+- **[Lithostitched](https://github.com/Apollounknowndev/lithostitched)** (@Apollounknowndev)
+- **[En-sityFunctions](https://modrinth.com/mod/en-sityfunction)** (MikeStorm03) 
+
+#### Worldgen Projects
+
+- **[Tectonic](https://modrinth.com/datapack/tectonic)** (@Apollounknowndev)
 
 ## Declaration of AI-use
 <h3>Almost all implementations in this repository were created by generative AI in an agentic process.</h3>

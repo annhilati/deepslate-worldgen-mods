@@ -33,7 +33,7 @@ export class TectonicConfigClamp extends DensityFunction {
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): TectonicConfigClamp {
         return new TectonicConfigClamp(
-            parser(obj.input),
+            parser(obj.input ?? obj.argument),
             parser(obj.min),
             parser(obj.max)
         );
@@ -64,7 +64,7 @@ export class TectonicInvert extends DensityFunction {
     }
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): TectonicInvert {
-        const parsedInput = parser(obj.argument);
+        const parsedInput = parser(obj.input ?? obj.argument);
         const { min, max } = parsedInput.range();
 
         let invertMin = min;

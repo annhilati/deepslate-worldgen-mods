@@ -27,7 +27,7 @@ export const DENSITY_FUNCTIONS: DensityFunctionMap = {
     ...Object.fromEntries(
         Object.entries(mathMaps).map(([name, func]) => [
             `moredfs:${name}`,
-            (obj: any, parser: InputParser) => new MoredfsMapped(parser(obj.argument), func),
+            (obj: any, parser: InputParser) => new MoredfsMapped(parser(obj.input ?? obj.argument), func),
         ])
     ),
     'moredfs:clamp': MoredfsClamp.fromJson,
@@ -36,16 +36,16 @@ export const DENSITY_FUNCTIONS: DensityFunctionMap = {
     ...Object.fromEntries(
         Object.entries(divMaps).map(([name, func]) => [
             `moredfs:${name}`,
-            (obj: any, parser: InputParser) => new MoredfsDivisionBase(parser(obj.argument1), parser(obj.argument2), func),
+            (obj: any, parser: InputParser) => new MoredfsDivisionBase(parser(obj.numerator ?? obj.argument1 ?? obj.argument), parser(obj.denominator ?? obj.argument2), func),
         ])
     ),
     'moredfs:reciprocal': MoredfsReciprocal.fromJson,
 
     // Double Arguments
-    'moredfs:subtract': (obj: any, parser: InputParser) => new MoredfsDivisionBase(parser(obj.argument1), parser(obj.argument2), doubleMaps['subtract']),
-    'moredfs:vector_angle': (obj: any, parser: InputParser) => new MoredfsDivisionBase(parser(obj.argument1), parser(obj.argument2), doubleMaps['vector_angle']),
-    'moredfs:power': (obj: any, parser: InputParser) => new MoredfsDivisionBase(parser(obj.base), parser(obj.exponent), doubleMaps['power']),
-    'moredfs:log': (obj: any, parser: InputParser) => new MoredfsDivisionBase(parser(obj.argument), parser(obj.base), doubleMaps['log']),
+    'moredfs:subtract': (obj: any, parser: InputParser) => new MoredfsDivisionBase(parser(obj.left ?? obj.argument1), parser(obj.right ?? obj.argument2), doubleMaps['subtract']),
+    'moredfs:vector_angle': (obj: any, parser: InputParser) => new MoredfsDivisionBase(parser(obj.argument1 ?? obj.x), parser(obj.argument2 ?? obj.z), doubleMaps['vector_angle']),
+    'moredfs:power': (obj: any, parser: InputParser) => new MoredfsDivisionBase(parser(obj.base ?? obj.argument1), parser(obj.exponent ?? obj.argument2), doubleMaps['power']),
+    'moredfs:log': (obj: any, parser: InputParser) => new MoredfsDivisionBase(parser(obj.argument ?? obj.input), parser(obj.base), doubleMaps['log']),
     'moredfs:dot_product': MoredfsDotProduct.fromJson,
 
     // Coordinates
@@ -61,7 +61,7 @@ export const DENSITY_FUNCTIONS: DensityFunctionMap = {
     'moredfs:derivative': MoredfsDerivative.fromJson,
     'moredfs:gradient_magnitude': MoredfsGradientMagnitude.fromJson,
     'moredfs:or_else': MoredfsOrElse.fromJson,
-    'moredfs:profiler': (obj: any, parser: InputParser) => parser(obj.argument),
+    'moredfs:profiler': (obj: any, parser: InputParser) => parser(obj.argument ?? obj.input),
     'moredfs:shift': MoredfsShift.fromJson,
     'moredfs:value_noise': MoredfsValueNoise.fromJson,
     'moredfs:single_channel_image_tessellation': MoredfsImageTessellation.fromJson,

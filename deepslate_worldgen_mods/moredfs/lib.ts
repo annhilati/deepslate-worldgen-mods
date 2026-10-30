@@ -135,7 +135,7 @@ export class MoredfsReciprocal extends DensityFunction {
     }
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): MoredfsReciprocal {
-        return new MoredfsReciprocal(parser(obj.denominator));
+        return new MoredfsReciprocal(parser(obj.denominator ?? obj.argument ?? obj.input));
     }
 }
 
@@ -172,7 +172,7 @@ export class MoredfsDotProduct extends DensityFunction {
     }
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): MoredfsDotProduct {
-        return new MoredfsDotProduct(parser(obj.argument1), parser(obj.argument2), obj.step_x ?? 1, obj.step_y ?? 1, obj.step_z ?? 1);
+        return new MoredfsDotProduct(parser(obj.argument1 ?? obj.left), parser(obj.argument2 ?? obj.right), obj.step_x ?? 1, obj.step_y ?? 1, obj.step_z ?? 1);
     }
 }
 
@@ -322,7 +322,7 @@ export class MoredfsDerivative extends DensityFunction {
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): MoredfsDerivative {
         return new MoredfsDerivative(
-            parser(obj.argument),
+            parser(obj.argument ?? obj.input),
             obj.component_x ? { direction: parser(obj.component_x.direction), step: obj.component_x.step } : null,
             obj.component_y ? { direction: parser(obj.component_y.direction), step: obj.component_y.step } : null,
             obj.component_z ? { direction: parser(obj.component_z.direction), step: obj.component_z.step } : null
@@ -355,7 +355,7 @@ export class MoredfsGradientMagnitude extends DensityFunction {
     }
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): MoredfsGradientMagnitude {
-        return new MoredfsGradientMagnitude(parser(obj.argument), obj.step_x ?? 1, obj.step_y ?? 1, obj.step_z ?? 1);
+        return new MoredfsGradientMagnitude(parser(obj.argument ?? obj.input), obj.step_x ?? 1, obj.step_y ?? 1, obj.step_z ?? 1);
     }
 }
 
@@ -380,7 +380,7 @@ export class MoredfsOrElse extends DensityFunction {
     }
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): MoredfsOrElse {
-        return new MoredfsOrElse(parser(obj.argument), parser(obj.fallback));
+        return new MoredfsOrElse(parser(obj.argument ?? obj.input), parser(obj.fallback));
     }
 }
 
@@ -416,7 +416,7 @@ export class MoredfsShift extends DensityFunction {
 
     static fromJson(obj: any, parser: InputParser = DensityFunction.fromJson): MoredfsShift {
         return new MoredfsShift(
-            parser(obj.argument),
+            parser(obj.argument ?? obj.input),
             obj.shift_x ? parser(obj.shift_x) : null,
             obj.shift_y ? parser(obj.shift_y) : null,
             obj.shift_z ? parser(obj.shift_z) : null
