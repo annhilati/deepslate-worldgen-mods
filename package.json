@@ -1,0 +1,35 @@
+{
+  "name": "deepslate-worldgen-mods",
+  "version": "0.1.0",
+  "description": "Deepslate compatibility patches and density function implementations for Minecraft mods.",
+  "type": "module",
+  "main": "./deepslate_worldgen_mods/index.ts",
+  "types": "./deepslate_worldgen_mods/index.ts",
+  "exports": {
+    ".": "./deepslate_worldgen_mods/index.ts",
+    "./types": "./deepslate_worldgen_mods/types.ts",
+    "./ensity": "./deepslate_worldgen_mods/ensity/index.ts",
+    "./lithostitched": "./deepslate_worldgen_mods/lithostitched/index.ts",
+    "./moredfs": "./deepslate_worldgen_mods/moredfs/index.ts",
+    "./tectonic": "./deepslate_worldgen_mods/tectonic/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc"
+  },
+  "peerDependencies": {
+    "deepslate": "^0.27.0"
+  },
+  "dependencies": {
+    "fastnoise-lite": "^1.1.1",
+    "pako": "^2.1.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.6.4",
+    "@types/pako": "^2.0.3",
+    "deepslate": "^0.27.2",
+    "typescript": "^5.6.3"
+  },
+  "author": "Annhilati",
+  "license": "MIT"
+}
