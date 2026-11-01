@@ -1,6 +1,5 @@
 # Node / JavaScript / TypeScript
 node_modules/
-dist/
 *.tsbuildinfo
 
 # Python

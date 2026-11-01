@@ -10,6 +10,7 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
+    "rootDir": "./deepslate_worldgen_mods",
     "outDir": "./dist"
   },
   "include": ["deepslate_worldgen_mods/**/*"]

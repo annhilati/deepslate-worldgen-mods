@@ -3,19 +3,39 @@
   "version": "0.1.0",
   "description": "Deepslate compatibility patches and density function implementations for Minecraft mods.",
   "type": "module",
-  "main": "./deepslate_worldgen_mods/index.ts",
-  "types": "./deepslate_worldgen_mods/index.ts",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
-    ".": "./deepslate_worldgen_mods/index.ts",
-    "./types": "./deepslate_worldgen_mods/types.ts",
-    "./ensity": "./deepslate_worldgen_mods/ensity/index.ts",
-    "./lithostitched": "./deepslate_worldgen_mods/lithostitched/index.ts",
-    "./moredfs": "./deepslate_worldgen_mods/moredfs/index.ts",
-    "./tectonic": "./deepslate_worldgen_mods/tectonic/index.ts"
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "default": "./dist/types.js"
+    },
+    "./ensity": {
+      "types": "./dist/ensity/index.d.ts",
+      "default": "./dist/ensity/index.js"
+    },
+    "./lithostitched": {
+      "types": "./dist/lithostitched/index.d.ts",
+      "default": "./dist/lithostitched/index.js"
+    },
+    "./moredfs": {
+      "types": "./dist/moredfs/index.d.ts",
+      "default": "./dist/moredfs/index.js"
+    },
+    "./tectonic": {
+      "types": "./dist/tectonic/index.d.ts",
+      "default": "./dist/tectonic/index.js"
+    }
   },
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "build": "tsc"
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "prepack": "npm run build"
   },
   "peerDependencies": {
     "deepslate": "^0.27.0"
