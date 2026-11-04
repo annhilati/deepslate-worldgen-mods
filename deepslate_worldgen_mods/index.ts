@@ -4,6 +4,7 @@ export { registerEnsity, DENSITY_FUNCTIONS as ENSITY_DENSITY_FUNCTIONS } from '.
 export { registerLithostitched, DENSITY_FUNCTIONS as LITHOSTITCHED_DENSITY_FUNCTIONS } from './lithostitched/index.js';
 export { registerMoredfs, DENSITY_FUNCTIONS as MOREDFS_DENSITY_FUNCTIONS } from './moredfs/index.js';
 export { registerTectonic, DENSITY_FUNCTIONS as TECTONIC_DENSITY_FUNCTIONS } from './tectonic/index.js';
+export { registerIkbLibrary, DENSITY_FUNCTIONS as IKBLIBRARY_DENSITY_FUNCTIONS } from './ikblibrary/index.js';
 
 import type { DensityFunctionMap, DensityFunctionRegistry } from './types.js';
 import { registerFunctions } from './types.js';
@@ -12,6 +13,7 @@ import { registerEnsity, DENSITY_FUNCTIONS as ensityFunctions } from './ensity/i
 import { registerLithostitched, DENSITY_FUNCTIONS as lithostitchedFunctions } from './lithostitched/index.js';
 import { registerMoredfs, DENSITY_FUNCTIONS as moredfsFunctions } from './moredfs/index.js';
 import { registerTectonic, DENSITY_FUNCTIONS as tectonicFunctions } from './tectonic/index.js';
+import { registerIkbLibrary, DENSITY_FUNCTIONS as ikbLibraryFunctions } from './ikblibrary/index.js';
 
 /**
  * Combined dictionary of all mod density functions.
@@ -21,6 +23,7 @@ export const ALL_DENSITY_FUNCTIONS: DensityFunctionMap = {
     ...lithostitchedFunctions,
     ...moredfsFunctions,
     ...tectonicFunctions,
+    ...ikbLibraryFunctions,
 };
 
 /**
@@ -31,6 +34,7 @@ export function registerAll(registry: DensityFunctionRegistry): void {
     registerLithostitched(registry);
     registerMoredfs(registry);
     registerTectonic(registry);
+    registerIkbLibrary(registry);
 }
 
 export default registerAll;

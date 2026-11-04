@@ -18,6 +18,10 @@
       "types": "./dist/ensity/index.d.ts",
       "default": "./dist/ensity/index.js"
     },
+    "./ikblibrary": {
+      "types": "./dist/ikblibrary/index.d.ts",
+      "default": "./dist/ikblibrary/index.js"
+    },
     "./lithostitched": {
       "types": "./dist/lithostitched/index.d.ts",
       "default": "./dist/lithostitched/index.js"
