@@ -9,7 +9,7 @@ Deepslate compatibility patches and custom density function implementations for 
 - **[More Density Functions](https://github.com/klinbee/More-Density-Functions)** (@klinbee)
 - **[Lithostitched](https://github.com/Apollounknowndev/lithostitched)** (@Apollounknowndev)
 - **[ikbLib](https://github.com/ikkyblob/ikbLib)** (@ikkyblob)
-- **[En-sityFunctions](https://modrinth.com/mod/en-sityfunction)** (MikeStorm03) 
+- **[En-sityFunctions](https://github.com/MikeStorm03/En-sityFunctions)** (MikeStorm03) 
 
 #### Worldgen Projects
 
