@@ -22,6 +22,10 @@
       "types": "./dist/ikblibrary/index.d.ts",
       "default": "./dist/ikblibrary/index.js"
     },
+    "./larion": {
+      "types": "./dist/larion/index.d.ts",
+      "default": "./dist/larion/index.js"
+    },
     "./lithostitched": {
       "types": "./dist/lithostitched/index.d.ts",
       "default": "./dist/lithostitched/index.js"

@@ -5,6 +5,7 @@ export { registerLithostitched, DENSITY_FUNCTIONS as LITHOSTITCHED_DENSITY_FUNCT
 export { registerMoredfs, DENSITY_FUNCTIONS as MOREDFS_DENSITY_FUNCTIONS } from './moredfs/index.js';
 export { registerTectonic, DENSITY_FUNCTIONS as TECTONIC_DENSITY_FUNCTIONS } from './tectonic/index.js';
 export { registerIkbLibrary, DENSITY_FUNCTIONS as IKBLIBRARY_DENSITY_FUNCTIONS } from './ikblibrary/index.js';
+export { registerLarion, DENSITY_FUNCTIONS as LARION_DENSITY_FUNCTIONS } from './larion/index.js';
 
 import type { DensityFunctionMap, DensityFunctionRegistry } from './types.js';
 import { registerFunctions } from './types.js';
@@ -14,6 +15,7 @@ import { registerLithostitched, DENSITY_FUNCTIONS as lithostitchedFunctions } fr
 import { registerMoredfs, DENSITY_FUNCTIONS as moredfsFunctions } from './moredfs/index.js';
 import { registerTectonic, DENSITY_FUNCTIONS as tectonicFunctions } from './tectonic/index.js';
 import { registerIkbLibrary, DENSITY_FUNCTIONS as ikbLibraryFunctions } from './ikblibrary/index.js';
+import { registerLarion, DENSITY_FUNCTIONS as larionFunctions } from './larion/index.js';
 
 /**
  * Combined dictionary of all mod density functions.
@@ -24,6 +26,7 @@ export const ALL_DENSITY_FUNCTIONS: DensityFunctionMap = {
     ...moredfsFunctions,
     ...tectonicFunctions,
     ...ikbLibraryFunctions,
+    ...larionFunctions,
 };
 
 /**
@@ -35,6 +38,7 @@ export function registerAll(registry: DensityFunctionRegistry): void {
     registerMoredfs(registry);
     registerTectonic(registry);
     registerIkbLibrary(registry);
+    registerLarion(registry);
 }
 
 export default registerAll;

@@ -6,14 +6,15 @@ Deepslate compatibility patches and custom density function implementations for 
 
 #### Worldgen Libraries
 
-- **[More Density Functions](https://github.com/klinbee/More-Density-Functions)** (@klinbee)
-- **[Lithostitched](https://github.com/Apollounknowndev/lithostitched)** (@Apollounknowndev)
-- **[ikbLib](https://github.com/ikkyblob/ikbLib)** (@ikkyblob)
-- **[En-sityFunctions](https://github.com/MikeStorm03/En-sityFunctions)** (MikeStorm03) 
+- **[More Density Functions](https://github.com/klinbee/More-Density-Functions)** 2.3.0 (@klinbee)
+- **[Lithostitched](https://github.com/Apollounknowndev/lithostitched)** 2.0.6 (@Apollounknowndev)
+- **[ikbLib](https://github.com/ikkyblob/ikbLib)** 1.0.0 (@ikkyblob)
+- **[En-sityFunctions](https://github.com/MikeStorm03/En-sityFunctions)** 1.1.0 (MikeStorm03) 
 
 #### Worldgen Projects
 
-- **[Tectonic](https://modrinth.com/datapack/tectonic)** (@Apollounknowndev)
+- **[Tectonic](https://modrinth.com/datapack/tectonic)** 3.0 (@Apollounknowndev)
+- **[Larion](https://github.com/ViciousBadger/larion-world-generation)** 4.3.0 (@ViciousBadger)
 
 ## Declaration of AI-use
 <h3>Almost all implementations in this repository were created by generative AI in an agentic process.</h3>

@@ -4,6 +4,7 @@ export { registerLithostitched, DENSITY_FUNCTIONS as LITHOSTITCHED_DENSITY_FUNCT
 export { registerMoredfs, DENSITY_FUNCTIONS as MOREDFS_DENSITY_FUNCTIONS } from './moredfs/index.js';
 export { registerTectonic, DENSITY_FUNCTIONS as TECTONIC_DENSITY_FUNCTIONS } from './tectonic/index.js';
 export { registerIkbLibrary, DENSITY_FUNCTIONS as IKBLIBRARY_DENSITY_FUNCTIONS } from './ikblibrary/index.js';
+export { registerLarion, DENSITY_FUNCTIONS as LARION_DENSITY_FUNCTIONS } from './larion/index.js';
 import type { DensityFunctionMap, DensityFunctionRegistry } from './types.js';
 /**
  * Combined dictionary of all mod density functions.

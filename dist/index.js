@@ -4,11 +4,13 @@ export { registerLithostitched, DENSITY_FUNCTIONS as LITHOSTITCHED_DENSITY_FUNCT
 export { registerMoredfs, DENSITY_FUNCTIONS as MOREDFS_DENSITY_FUNCTIONS } from './moredfs/index.js';
 export { registerTectonic, DENSITY_FUNCTIONS as TECTONIC_DENSITY_FUNCTIONS } from './tectonic/index.js';
 export { registerIkbLibrary, DENSITY_FUNCTIONS as IKBLIBRARY_DENSITY_FUNCTIONS } from './ikblibrary/index.js';
+export { registerLarion, DENSITY_FUNCTIONS as LARION_DENSITY_FUNCTIONS } from './larion/index.js';
 import { registerEnsity, DENSITY_FUNCTIONS as ensityFunctions } from './ensity/index.js';
 import { registerLithostitched, DENSITY_FUNCTIONS as lithostitchedFunctions } from './lithostitched/index.js';
 import { registerMoredfs, DENSITY_FUNCTIONS as moredfsFunctions } from './moredfs/index.js';
 import { registerTectonic, DENSITY_FUNCTIONS as tectonicFunctions } from './tectonic/index.js';
 import { registerIkbLibrary, DENSITY_FUNCTIONS as ikbLibraryFunctions } from './ikblibrary/index.js';
+import { registerLarion, DENSITY_FUNCTIONS as larionFunctions } from './larion/index.js';
 /**
  * Combined dictionary of all mod density functions.
  */
@@ -18,6 +20,7 @@ export const ALL_DENSITY_FUNCTIONS = {
     ...moredfsFunctions,
     ...tectonicFunctions,
     ...ikbLibraryFunctions,
+    ...larionFunctions,
 };
 /**
  * Registers all supported mod density functions and registries into the provided registry.
@@ -28,6 +31,7 @@ export function registerAll(registry) {
     registerMoredfs(registry);
     registerTectonic(registry);
     registerIkbLibrary(registry);
+    registerLarion(registry);
 }
 export default registerAll;
 //# sourceMappingURL=index.js.map
