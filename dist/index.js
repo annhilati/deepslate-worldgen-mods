@@ -1,16 +1,17 @@
 export * from './types.js';
-export { registerEnsity, DENSITY_FUNCTIONS as ENSITY_DENSITY_FUNCTIONS } from './ensity/index.js';
-export { registerLithostitched, DENSITY_FUNCTIONS as LITHOSTITCHED_DENSITY_FUNCTIONS } from './lithostitched/index.js';
-export { registerMoredfs, DENSITY_FUNCTIONS as MOREDFS_DENSITY_FUNCTIONS } from './moredfs/index.js';
-export { registerTectonic, DENSITY_FUNCTIONS as TECTONIC_DENSITY_FUNCTIONS } from './tectonic/index.js';
-export { registerIkbLibrary, DENSITY_FUNCTIONS as IKBLIBRARY_DENSITY_FUNCTIONS } from './ikblibrary/index.js';
-export { registerLarion, DENSITY_FUNCTIONS as LARION_DENSITY_FUNCTIONS } from './larion/index.js';
-import { registerEnsity, DENSITY_FUNCTIONS as ensityFunctions } from './ensity/index.js';
-import { registerLithostitched, DENSITY_FUNCTIONS as lithostitchedFunctions } from './lithostitched/index.js';
-import { registerMoredfs, DENSITY_FUNCTIONS as moredfsFunctions } from './moredfs/index.js';
-import { registerTectonic, DENSITY_FUNCTIONS as tectonicFunctions } from './tectonic/index.js';
-import { registerIkbLibrary, DENSITY_FUNCTIONS as ikbLibraryFunctions } from './ikblibrary/index.js';
-import { registerLarion, DENSITY_FUNCTIONS as larionFunctions } from './larion/index.js';
+export * from './compat/index.js';
+export { registerEnsity, DENSITY_FUNCTIONS as ENSITY_DENSITY_FUNCTIONS } from './mods/ensity/index.js';
+export { registerLithostitched, DENSITY_FUNCTIONS as LITHOSTITCHED_DENSITY_FUNCTIONS } from './mods/lithostitched/index.js';
+export { registerMoredfs, DENSITY_FUNCTIONS as MOREDFS_DENSITY_FUNCTIONS } from './mods/moredfs/index.js';
+export { registerTectonic, DENSITY_FUNCTIONS as TECTONIC_DENSITY_FUNCTIONS } from './mods/tectonic/index.js';
+export { registerIkbLibrary, DENSITY_FUNCTIONS as IKBLIBRARY_DENSITY_FUNCTIONS } from './mods/ikblibrary/index.js';
+export { registerLarion, DENSITY_FUNCTIONS as LARION_DENSITY_FUNCTIONS } from './mods/larion/index.js';
+import { registerEnsity, DENSITY_FUNCTIONS as ensityFunctions } from './mods/ensity/index.js';
+import { registerLithostitched, DENSITY_FUNCTIONS as lithostitchedFunctions } from './mods/lithostitched/index.js';
+import { registerMoredfs, DENSITY_FUNCTIONS as moredfsFunctions } from './mods/moredfs/index.js';
+import { registerTectonic, DENSITY_FUNCTIONS as tectonicFunctions } from './mods/tectonic/index.js';
+import { registerIkbLibrary, DENSITY_FUNCTIONS as ikbLibraryFunctions } from './mods/ikblibrary/index.js';
+import { registerLarion, DENSITY_FUNCTIONS as larionFunctions } from './mods/larion/index.js';
 /**
  * Combined dictionary of all mod density functions.
  */

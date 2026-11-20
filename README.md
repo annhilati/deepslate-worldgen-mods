@@ -1,6 +1,6 @@
 # deepslate-worldgen-mods
 
-Deepslate compatibility patches and custom density function implementations for popular Minecraft world generation mods.
+This project provides extensions for the Minecraft simulation library [Deepslate](https://github.com/misode/deepslate) regarding worldgen. Support for popular worldgen libraries and fixes for historic Deepslate bugs are featured.
 
 ## Supported Mods
 
@@ -15,6 +15,39 @@ Deepslate compatibility patches and custom density function implementations for 
 
 - **[Tectonic](https://modrinth.com/datapack/tectonic)** 3.0 (@Apollounknowndev)
 - **[Larion](https://github.com/ViciousBadger/larion-world-generation)** 4.3.0 (@ViciousBadger)
+
+
+## Deepslate Versions
+
+Deepslate follows a development pattern, where it is always and only up to date to the newest Minecraft full release version
+which means that for simulating old game versions, outdated versions of Deepslate must be used for that.
+Worldgen underwent big format changes a few times making distinctions of the following versions neccesarry:
+
+Game Versions    | Deepslate Version
+---------------- | ---------
+26.3 +           | `*`
+1.21.9 – 26.3    | `^0.26.2`
+1.18.2 – 1.21.8  | `^0.24.0`
+
+The "newest" or latest compatible version should always be used, which are the versions stated above.
+
+## How to use
+
+1. Install via npm's `github` scope:
+    ```sh
+    npm install github:Annhilati/deepslate-mod-compatability
+    ```
+2. (to be improved)
+    ```ts
+    import { DensityFunction, Identifier } from 'deepslate';
+    import { registerAll } from 'deepslate-worldgen-mods';
+
+    registerAll(Registry.REGISTRY.get(
+        Identifier.parse("minecraft:density_function_type")
+    ));
+    ```
+
+---
 
 ## Declaration of AI-use
 <h3>Almost all implementations in this repository were created by generative AI in an agentic process.</h3>

@@ -10,6 +10,10 @@
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     },
+    "./compat": {
+      "types": "./dist/compat/index.d.ts",
+      "default": "./dist/compat/index.js"
+    },
     "./types": {
       "types": "./dist/types.d.ts",
       "default": "./dist/types.js"
@@ -40,13 +44,15 @@
     }
   },
   "scripts": {
-    "typecheck": "tsc --noEmit",
+    "clean": "node -e \"fs.rmSync('dist', { recursive: true, force: true })\"",
+    "prebuild": "npm run clean",
     "build": "tsc",
     "watch": "tsc --watch",
-    "prepack": "npm run build"
+    "prepack": "npm run build",
+    "test": "node --test dist/test/compat.test.js"
   },
   "peerDependencies": {
-    "deepslate": "^0.27.0"
+    "deepslate": ">=0.23.6"
   },
   "dependencies": {
     "fastnoise-lite": "^1.1.1",
